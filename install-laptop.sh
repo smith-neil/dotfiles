@@ -35,8 +35,7 @@ echo "\n\n[infinality-bundle]\nServer = http://bohoomil.com/repo/$arch\n\n[infin
 for pkg in "${packages[@]}"; do
     pacaur -Q "$pkg"
     if [ "$?" -eq 1 ]; then
-        # pacaur -Sq $pkg --noconfirm --noedit 
-        echo "downloading $pkg"
+        pacaur -Sq $pkg --noconfirm --noedit 
     fi
 done
 
