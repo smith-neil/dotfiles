@@ -9,6 +9,13 @@
 # - synaptics/70-synaptics.conf
 ##################################################################
 
+# check were running with root
+if [[ $UID != 0 ]]; then
+    echo "Run with sudo:"
+    echo "sudo $0 $*"
+    exit 1
+fi
+
 # create backups
 [[ -d "~/.i3" ]] && mv ~/.i3 ~/.i3.bak
 [[ -d "/etc/X11/xorg.conf.d/70-synaptics.conf" ]] && mv /etc/X11/xorg.conf.d/70-synaptics.conf.bak

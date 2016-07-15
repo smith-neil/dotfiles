@@ -27,6 +27,13 @@ packages=(
     "zsh-completions"
 )
 
+# check were running with root
+if [[ $UID != 0 ]]; then
+    echo "Run with sudo:"
+    echo "sudo $0 $*"
+    exit 1
+fi
+
 # install pacaur
 pacman -Q pacaur
 if [ "$?" -eq 1 ]; then

@@ -22,6 +22,13 @@ packages=(
     "xorg-xprop"
 )
 
+# check were running with root
+if [[ $UID != 0 ]]; then
+    echo "Run with sudo:"
+    echo "sudo $0 $*"
+    exit 1
+fi
+
 # adds infinality repos to pacman.conf
 echo "\n\n[infinality-bundle]\nServer = http://bohoomil.com/repo/$arch\n\n[infinality-bundle-multilib]\nServer = http://bohoomil.com/repo/multilib/arch\n\n[infinality-bundle-fonts]\nServer = http://bohoomil.com/repo/fonts" >> /etc/pacman.conf
 
