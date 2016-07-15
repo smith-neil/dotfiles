@@ -1,0 +1,27 @@
+"*":
+  "advanced-open-file":
+    createDirectories: true
+  "base16-syntax":
+    scheme: "Eighties"
+  core:
+    themes: [
+      "atom-solarized-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  pigments:
+    autocompleteScopes: [
+      ".source.css"
+      ".source.less"
+      ".source.css.less"
+      ".source.sass"
+      ".source.css.scss"
+      ".source.stylus"
+    ]
+  welcome:
+    showOnStartup: false

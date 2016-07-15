@@ -1,0 +1,117 @@
+! Solarized color scheme
+
+! Common color definitions
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+! Dark base color definitions
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+! Light base color definitions
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+! Set colors
+*background:              S_base03
+*foreground:              S_base0
+*color0:                  S_base02
+*color1:                  S_red
+*color2:                  S_green
+*color3:                  S_yellow
+*color4:                  S_blue
+*color5:                  S_magenta
+*color6:                  S_cyan
+*color7:                  S_base2
+*color8:                  S_base03
+*color9:                  S_orange
+*color10:                 S_base01
+*color11:                 S_base00
+*color12:                 S_base0
+*color13:                 S_violet
+*color14:                 S_base1
+*color15:                 S_base3
+
+URxvt*fading:                  20
+URxvt*fadeColor:               S_base03
+URxvt*pointerColor:            S_base01
+URxvt*pointerColorBackground:  S_base01
+URxvt*pointerColorForeground:  S_base1
+URxvt*colorUL:                 S_yellow
+URxvt*underlineColor:          S_yellow
+URxvt*colorBD:                 S_yellow
+URxvt*colorIT:                 S_yellow
+!URxvt*highlightColor:
+!URxvt*highlightTextColor:
+
+! Xft settings
+Xft*dpi: 96
+Xft*antialias: true
+Xft*hinting: true
+
+! Set font
+*font: xft:DejaVu\ Sans\ Mono\ for\ Powerline:pixelsize=13,\
+       xft:Sauce\ Code\ Pro\ Nerd\ Font:pixelsize=13
+!*boldFont:
+!*italicFont:
+!*boldItalicFont:
+
+! URxvt settings
+
+URxvt*perl-ext-common: resize-font
+
+! Scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! Disable the scrollback buffer for the secondary screen
+URxvt*secondaryScreen: 1
+URxvt*secondaryScroll: 0
+
+! Disable scrollbars
+URxvt*scrollBar: 0
+
+! Spacing
+URxvt*lineHeight: 0.8
+URxvt*letterSpace: -1
+
+! Resize font hotkeys
+URxvt*resize-font.smaller: C-underscore
+URxvt*resize-font.bigger: C-plus
+URxvt*resize-font.reset: C-equal
+URxvt*resize-font.show: C-question
+
+! Rofi settings
+rofi.color-enabled: true
+rofi.color-window: S_base03
+rofi.color-normal: S_base03, S_blue, S_base03, S_base03, S_magenta
+rofi.color-active: S_base03, S_blue, S_base03, S_base03, S_magenta
+rofi.color-urgent: S_base03, S_blue, S_base03, S_base03, S_magenta
+rofi.font: DejaVu Sans Mono 18
+rofi.width: 100
+!rofi.fullscreen: true
+rofi.separator-style: solid
+rofi.lines: 5
+rofi.eh: 2
+rofi.padding: 360
+rofi.opacity: 94
+rofi.bw: 0
+rofi.hide-scrollbar: true
+rofi.terminal: urxvt

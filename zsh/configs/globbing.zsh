@@ -1,0 +1,4 @@
+setopt NO_CASE_GLOB
+setopt NUMERIC_GLOB_SORT
+setopt EXTENDED_GLOB
+setopt GLOB_DOTS
