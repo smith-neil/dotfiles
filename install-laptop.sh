@@ -31,6 +31,7 @@ fi
 
 # adds infinality repos to pacman.conf
 echo "\n\n[infinality-bundle]\nServer = http://bohoomil.com/repo/$arch\n\n[infinality-bundle-multilib]\nServer = http://bohoomil.com/repo/multilib/arch\n\n[infinality-bundle-fonts]\nServer = http://bohoomil.com/repo/fonts" >> /etc/pacman.conf
+pacman-key -r 962DDE58
 
 for pkg in "${packages[@]}"; do
     pacaur -Q "$pkg"
