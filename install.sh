@@ -46,11 +46,3 @@ for pkg in "${packages[@]}"; do
         pacaur -Sq $pkg --noconfirm --noedit
     fi
 done
-
-# install System San Francisco font
-cd /usr/share/fonts/TTF
-curl -o https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Bold.ttf
-curl -o https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Regular.ttf
-curl -o https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Thin.ttf 
-curl -o https://github.com/supermarin/YosemiteSanFranciscoFont/blob/master/System%20San%20Francisco%20Display%20Ultralight.ttf
-cd ~/

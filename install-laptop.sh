@@ -39,3 +39,9 @@ for pkg in "${packages[@]}"; do
     fi
 done
 
+# installs System San Francisco font
+# TODO: add the font's PKGBUILD to the AUR and install like other packages
+if [[ ! -d "~/repos" ]] && mkdir ~/repos
+cd ~/repos && git clone git@github.com:smith-neil/YosemiteSanFranciscoFont.git
+cd YosemiteSanFranciscoFont && makepkg -sri
+cd ~
