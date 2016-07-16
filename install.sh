@@ -4,7 +4,6 @@ packages=(
     "antigen-git"
     "atom-editor-git"
     "google-chrome"
-    "dont-panic-git"
     "firefox"
     "git"
     "nautilus"
@@ -46,3 +45,10 @@ for pkg in "${packages[@]}"; do
         pacaur -Sq $pkg --noconfirm --noedit
     fi
 done
+
+# install dont-panic
+# TODO: add dont-panic-git PKGBUILD to AUR and install like other packages
+[[ ! -d "~/abs" ]] && mkdir ~/abs
+cd ~/abs && git clone git@github.com:smith-neil/dont-panic-git.git
+cd dont-panic-git && makepkg -sri
+cd ~
