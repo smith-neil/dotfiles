@@ -35,10 +35,10 @@ if [[ $UID != 0 ]]; then
 fi
 
 # install pacaur
-pacman -Q pacaur
-if [ "$?" -eq 1 ]; then
-    echo "downloading pacaur"
-fi
+[[ ! -d "~/abs" ]] && mkdir ~/abs
+cd ~/abs && git clone https://aur.archlinux.org/pacaur.git
+cd pacaur && makepkg -sri
+cd ~
 
 for pkg in "${packages[@]}"; do
     pacaur -Q "$pkg"
