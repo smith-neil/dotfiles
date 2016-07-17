@@ -42,7 +42,7 @@ cd ~
 for pkg in "${packages[@]}"; do
     pacaur -Q "$pkg"
     if [ "$?" -eq 1 ]; then
-        pacaur -Sq $pkg --noconfirm --noedit
+        pacaur -Sq "$pkg" --noconfirm --noedit
     fi
 done
 
@@ -50,5 +50,5 @@ done
 # TODO: add dont-panic-git PKGBUILD to AUR and install like other packages
 [[ ! -d "~/abs" ]] && mkdir ~/abs
 cd ~/abs && git clone git@github.com:smith-neil/dont-panic-git.git
-cd dont-panic-git && makepkg -sri
+cd dont-panic-git && makepkg --noconfirm -sri
 cd ~
