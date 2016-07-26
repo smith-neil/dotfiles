@@ -35,6 +35,8 @@ alias sortnr='sort -nr'
 alias rm='rm -i'
 alias mv='mv -i'
 
+alias term-size='echo "Rows=$(tput lines) Cols=$(tput cols)"'
+
 alias pac='pacaur'
 alias pacin='pacaur -S'
 alias pacloci='pacaur -Qi'
@@ -58,6 +60,4 @@ alias nmdevstatus='nmcli device status'
 alias nmdevdiscon='nmcli device disconnect iface'
 alias nmconmake='nmcli connection edit con-name'
 alias nmconedit='nmcli connection edit'
-
-alias atom="atom-git"
 
