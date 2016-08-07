@@ -9,6 +9,8 @@ Plugin 'chrisbra/Colorizer'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
@@ -23,6 +25,7 @@ set rtp+=/usr/lib/python2.7/site-packages/powerline/bindings/vim
 " set theme
 set background=dark
 colorscheme solarized
+let g:airline_theme='base16'
 
 set tabstop=4           " number of visual spaces per TAB
 set softtabstop=4       " number of spaces in tab when editing
@@ -114,6 +117,9 @@ noremap <silent> <leader>r :call VisualSelection('replace')<CR>
 
 " <leader>ss toggles spell checking
 map <leader>ss :setlocal spell!<CR>
+
+" use powerline symbols with airline
+let g:airline_powerline_fonts = 1
 
 " specify the behavior when switching between buffers 
 try
